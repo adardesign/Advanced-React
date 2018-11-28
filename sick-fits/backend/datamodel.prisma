@@ -1,0 +1,13 @@
+type User {
+  id: ID! @unique
+  name: String!
+}
+
+type Products {
+  id: ID! @unique
+  title: String!
+  sku: String!
+  imgSrc: String!
+  price: Int!
+  stock:Boolean!
+}
