@@ -1,13 +1,32 @@
 type User {
   id: ID! @unique
   name: String!
+  email:String
 }
 
 type Products {
   id: ID! @unique
   title: String!
   sku: String!
-  imgSrc: String!
+  brand:String!
+  imgSrc: [String]!
   price: Int!
   stock:Boolean!
+  reviewsCount:Int
+  reviewsScore:Float
+}
+
+type Item {
+  id: ID! @unique
+  title: String!
+  description:String!
+  sku: String!
+  brand:String!
+  image: String!
+  largeImage: String
+  price: Int!
+  stock:Boolean!
+  reviewsCount:Int
+  reviewsScore:Float
+  user: User!
 }
